@@ -24,12 +24,8 @@ else:
 		password = input("Please enter password for "+ platform + ": ")
 		pws[platform] = password
 		
-		#enter path of hidden folder here
 		pwfile = open(filepath, 'w')
-		
 		json.dump(pws, pwfile)
 		pyperclip.copy(pws[platform])
 		print("Password for " + platform + " added to database and copied to clipboard.")
 		pwfile.close()
-
-		
