@@ -3,7 +3,8 @@
 import json, pyperclip
 
 #enter path of hidden folder here
-pwfile = open(r"HiddenFolder\pws.txt")
+filepath = r"HiddenFolder\pws.txt"
+pwfile = open(filepath)
 
 pws = json.load(pwfile) #using json object as a dictionary of passwords
 pwfile.close()
@@ -24,7 +25,7 @@ else:
 		pws[platform] = password
 		
 		#enter path of hidden folder here
-		pwfile = open(r"HiddenFolder\pws.txt", 'w')
+		pwfile = open(filepath, 'w')
 		
 		json.dump(pws, pwfile)
 		pyperclip.copy(pws[platform])
