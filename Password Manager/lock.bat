@@ -11,7 +11,7 @@ if NOT %pass%== pw goto FAIL
 attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
 ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" HiddenFolder
 
-REM enter the path to your hidden folder
+REM enter the absolute path to your hidden folder
 python "HiddenFolder\pm.py"
 
 goto LOCK
