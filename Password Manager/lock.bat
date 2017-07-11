@@ -8,18 +8,18 @@ set/p "pass=>"
 
 REM default password is pw
 if NOT %pass%== pw goto FAIL
-attrib -h -s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
-ren "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}" HiddenFolder
+attrib -h -s "cbr12k%3e"
+ren "cbr12k%3e" "HiddenFolder"
 
 REM enter the absolute path to your hidden folder
-python "HiddenFolder\pm.py"
+python "\HiddenFolder\pm.py"
 
 goto LOCK
 :FAIL
 echo Invalid password
 goto end
 :LOCK
-ren HiddenFolder "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
-attrib +h +s "Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+ren "HiddenFolder" "cbr12k%3e"
+attrib +h +s "cbr12k%3e"
 echo Password Manager locked
 :End
