@@ -1,6 +1,6 @@
+@ECHO OFF
 REM batch file which unlocks and runs the password manager
 
-@ECHO OFF
 if EXIST "HiddenFolder" goto LOCK
 :UNLOCK
 echo Enter password to your Password Manager
