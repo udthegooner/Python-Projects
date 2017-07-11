@@ -6,9 +6,9 @@ Note: Since this is only a simple password manager made using python, it doesn't
 Steps to install
 
 1. Assuming you have python installed, use pip install pyperclip.
-2. You can keep the PasswordManager.py, lock.bat, and the HiddenFolder anywhere you like. Say the PasswordManager.py is on Desktop, while the other 2 are in Documents.
-3. Open PasswordManager.py in a text editor and edit line #5 to add the absolute path of the location of lock.bat (Documents) within the quotes in cwd=r"".
-4. Open lock.bat in a text editor and edit line #15 to add the absolute path of the location of HiddenFolder (Documents) within the quotes before HiddenFolder\pm.py.
-5. Open pm.py in HiddenFolder in a text editor and edit line 6 to add the absolute path of the location of Hidden Folder(Documents) within the quotes before HiddenFolder\pws.txt.
-6. Finally right click on HiddenFolder and lock.bat and click on Properties to change their Attributes to Hidden.
-7. Double click on PasswordManager on Desktop to run the manager.
+2. Keep lock.bat and the HiddenFolder in the same directory. PasswordManager.py can be anywhere you like. Say the PasswordManager.py is on Desktop, while the other 2 are in Documents.
+3. Open PasswordManager.py in a text editor and edit line #5 to add the absolute path of the location of lock.bat (C:\Users\xyz\Documents) within the quotes before \lock.bat AND in cwd=r"".
+4. Open lock.bat in a text editor and edit line #15 to add the absolute path of the location of HiddenFolder (C:\Users\xyz\Documents) within the quotes before \HiddenFolder\pm.py. You can also change the master password on line 10. Default password is pw.
+5. Open pm.py in HiddenFolder in a text editor and edit line 6 to add the absolute path of the location of Hidden Folder(Documents) within the quotes before \HiddenFolder\pws.txt.
+6. Finally right click on lock.bat and the 2 files inside HiddenFolder and click on Properties to change their Attributes to Hidden.
+7. Run PasswordManager.py through command line.
