@@ -2,5 +2,5 @@
 
 from subprocess import Popen
 #enter location of batch file
-p = Popen("\lock.bat", cwd=r"")
+p = Popen(r"\lock.bat", cwd=r"")
 stdout, stderr = p.communicate()
