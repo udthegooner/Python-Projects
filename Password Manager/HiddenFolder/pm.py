@@ -1,9 +1,9 @@
 #script which runs the password manager
 
-import json, pyperclip
+import json, pyperclip, os
 
-#enter path of hidden folder here
-filepath = r"\HiddenFolder\pws.txt"
+currLocation = os.path.dirname(os.path.realpath(__file__))
+filepath = currLocation + r"\pws.txt"
 pwfile = open(filepath)
 
 pws = json.load(pwfile) #using json object as a dictionary of passwords
