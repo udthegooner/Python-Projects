@@ -2,5 +2,9 @@
 
 from subprocess import Popen
 #enter location of batch file
-p = Popen(r"\lock.bat", cwd=r"")
+lockLocation = r""
+#enter location of Hidden Folder
+dirLocation = r""
+
+p = Popen(lockLocation + r"\lock.bat", cwd = dirLocation)
 stdout, stderr = p.communicate()
