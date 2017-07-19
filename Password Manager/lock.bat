@@ -8,8 +8,9 @@ set/p "pass=>"
 
 REM default password is pw
 if NOT %pass%== pw goto FAIL
-attrib -h -s "cbr12k%3e"
-ren "cbr12k%3e" "HiddenFolder"
+attrib -h -s "cbr12k3e"
+ren "cbr12k3e" "HiddenFolder"
+attrib -h "HiddenFolder\pws.txt"
 
 REM enter the absolute path to your hidden folder
 python "\HiddenFolder\pm.py"
@@ -19,7 +20,9 @@ goto LOCK
 echo Invalid password
 goto end
 :LOCK
-ren "HiddenFolder" "cbr12k%3e"
-attrib +h +s "cbr12k%3e"
+ren "HiddenFolder" "cbr12k3e"
+attrib +h +s "cbr12k3e"
+attrib +h "HiddenFolder\pws.txt"
+
 echo Password Manager locked
 :End
